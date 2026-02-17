@@ -1,494 +1,443 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pink iMac</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <style>
-        * {
-            transition: 100ms;
-        }
-
-        .glass {
-            background-color: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(10px) brightness(110%);
-        }
-
-        .text-pink {
-            color: #ce75a2 !important;
-        }
-
-        /* make the arrows in the carousel pink */
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            filter: invert(65%) sepia(48%) saturate(470%) hue-rotate(290deg) brightness(100%) contrast(97%);
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: none;
-            border: none;
-        }
-
-        /* scrollspy style */
-        .nav-pills .nav-link {
-            color: #ce75a2;
-            font-weight: 500;
-            border-radius: 50rem;
-            transition: all 0.2s ease;
-            font-size: 0.8rem;
-        }
-
-        .nav-pills .nav-link.active {
-            background-color: #ce75a2;
-            color: white !important;
-        }
-
-        .nav-pills .nav-link:hover {
-            color: #b04b85;
-        }
-
-        .btn-pink {
-            background-color: #ce75a2;
-            color: white;
-            border-radius: 50px;
-            padding: 10px 25px;
-            font-weight: 500;
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-pink:hover {
-            background-color: #b45c8b;
-            transform: translateY(-2px);
-        }
-
-        /* hover on card features */
-        .card:hover {
-            border: 2px solid #ce75a2;
-            transform: translateY(-1px);
-            transition: all 0.1s ease;
-        }
-
-        .price-tag {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            font-size: 0.9rem;
-            color: #b04b85;
-            font-weight: 500;
-            text-align: center;
-            margin-top: 5px;
-        }
-
-        .card:hover+.price-tag {
-            opacity: 1;
-        }
-
-        section {
-            scroll-margin-top: 120px;
-        }
-
-
-        body {
-            background: linear-gradient(135deg, #ffd6e8, #fff0f7, #ffe1ed);
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #333;
-            overflow-x: hidden;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink iMac | Apple M4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#imac-nav" data-bs-offset="70" tabindex="0">
+<body>
+    <nav>
+        <div class="nav-container d-flex justify-content-between align-items-center gap-3">
+            <div class="logo">
+                <svg fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
+                </svg>
+                Pink iMac
+            </div>
 
-    <div class="container-fluid position-sticky top-0 z-1">
-        <div class="row">
-            <div class="col">
-                <div
-                    class="card my-4 py-4 px-5 rounded-5 glass d-flex flex-row justify-content-between align-items-center flex-wrap">
-                    <h5 class="d-inline-flex align-items-center "
-                        style="font-family: 'Times New Roman', Times, serif; color: #ce75a2; font-weight:700;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            class="bi bi-apple me-2" viewBox="0 0 16 16">
-                            <path
-                                d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
-                            <path
-                                d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
-                        </svg>
-                        Pink iMac
-                    </h5>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#configure">Configure</a></li>
+                <li><a href="#features">Features</a></li>
+            </ul>
 
-                    <!-- scrollspy nav -->
-                    <ul id="imac-nav" class="nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#overview">Overview</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#apple">Buy Now</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#viewmore">View More</a>
-                        </li>
-                    </ul>
+            <div class="d-flex align-items-center gap-3">
+                <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle" aria-label="Toggle dark mode">
+                    <svg id="toggleIcon" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                    </svg>
+                    <span class="toggle-label" id="toggleLabel">Dark</span>
+                </button>
+
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <!--  card -->
-    <div class="container">
-        <div class="row flex-column-reverse flex-md-row">
+    <section class="home-section section" id="overview">
+        <div class="w-100">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h1 class="section-title">Pink iMac</h1>
+                    <h2 class="section-subtitle">Style meets performance.</h2>
+                    <div class="price-badge">From ₱84,990</div>
 
-            <div class="col-md-6 col-12">
-                <section id="overview">
-                    <h1 class="text-pink fw-bold fs-1 lh-sm text-center">
-                        The Pink iMac — Style Meets Performance
-                    </h1>
-                    <h3 class="text-pink fw-semibold fs-5 mt-3 text-center">
-                        for only ₱84,990.00
-                    </h3>
-
-                    <p class="text-dark fs-5 text-center mt-4">
-                        Experience the perfect blend of power and beauty with the new
-                        <strong class="text-pink">Pink iMac</strong>. Powered by the Apple M4 chip, it delivers
-                        blazing-fast performance and stunning graphics on a breathtaking
-                        24-inch 4.5K Retina display. With sleek design, vibrant color,
-                        and seamless accessories, the Pink iMac turns every workspace into
-                        something extraordinary.
+                    <p class="home-text">
+                        Experience the perfect blend of power and beauty with the new Pink iMac. Powered by the Apple M4
+                        chip, it delivers blazing-fast performance and stunning graphics on a breathtaking 24-inch 4.5K
+                        Retina display.
                     </p>
 
-                    <!-- product details list -->
-                    <section id="features" class="mt-4 ms-4">
-                        <ul class="ps-4">
-                            <li>Apple M4 chip with 8-core CPU, 8-core GPU, 16-core Neural Engine</li>
-                            <li>24-inch 4.5K Retina display² / Standard glass</li>
-                            <li>16GB unified memory</li>
-                            <li>256GB SSD storage</li>
-                            <li>Two Thunderbolt / USB 4 ports</li>
-                            <li>Magic Mouse</li>
-                            <li>Magic Keyboard - US English</li>
-                        </ul>
+                    <ul class="specs-list">
+                        <li>Apple M4 chip with 8-core CPU and 8-core GPU</li>
+                        <li>24-inch 4.5K Retina display</li>
+                        <li>16GB unified memory</li>
+                        <li>256GB SSD storage</li>
+                        <li>Two Thunderbolt / USB 4 ports</li>
+                        <li>Magic Mouse & Magic Keyboard included</li>
+                    </ul>
 
-
-
-                        <h5 class="fw-semibold mt-4 text-pink">Memory</h5>
-                        <div class="row g-3 mt-2">
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">16GB unified memory</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">24GB unified memory</p>
-                                </div>
-                                <div class="price-tag">+ ₱13,000</div>
-                            </div>
-                        </div>
-
-                        <h5 class="fw-semibold mt-4 text-pink">Storage</h5>
-                        <div class="row g-3 mt-2">
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">256GB SSD storage</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">512GB SSD storage</p>
-                                </div>
-                                <div class="price-tag">+ ₱13,000</div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">1TB SSD storage</p>
-                                </div>
-                                <div class="price-tag">+ ₱26,000</div>
-                            </div>
-                        </div>
-
-
-                        <h5 class="fw-semibold mt-4 text-pink">Ethernet</h5>
-                        <div class="row g-3 mt-2">
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">No Ethernet</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">Gigabit Ethernet</p>
-                                </div>
-                                <div class="price-tag">+ ₱2,000</div>
-                            </div>
-                        </div>
-
-
-
-                        <h5 class="fw-semibold mt-4 text-pink">Pink Mouse or Trackpad</h5>
-                        <div class="row g-3 mt-2">
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">Magic Mouse</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">Magic Trackpad</p>
-                                </div>
-                                <div class="price-tag">+ ₱2,500</div>
-                            </div>
-                        </div>
-
-
-
-                        <h5 class="fw-semibold mt-4 text-pink">Pink Keyboards</h5>
-                        <div class="row g-3 mt-2">
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">Magic Keyboard - US English</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">Magic Keyboard with Touch ID and Numeric Keypad - US English</p>
-                                </div>
-                                <div class="price-tag">+ ₱5,000</div>
-                            </div>
-                        </div>
-
-
-
-                        <h5 class="fw-semibold mt-4 text-pink">Pre-Installed Software</h5>
-                        <div class="row g-3 mt-0">
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">Final Cut Pro</p>
-                                </div>
-                                <div class="price-tag">+ ₱19,990</div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">Logic Pro</p>
-                                </div>
-                                <div class="price-tag">+ ₱12,990</div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card text-center p-3 rounded-4 shadow">
-                                    <p class="mb-0">No, thanks</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </section>
-                    <section id="apple" class="mt-5 text-center">
-                        <a href="https://www.apple.com/ph/shop/buy-mac/imac/pink-24-inch-standard-glass-apple-m4-chip-with-8-core-cpu-and-8-core-gpu-16gb-memory-256gb"
-                            class="btn btn-pink mt-3" target="_blank">
-                            Buy Now
-                        </a>
-                    </section>
-            </div>
-
-            <!-- bootstrap carousel indicators for imac images -->
-
-            <div class="col-md-6 col-12 mb-4 position-sticky">
-                <div class="card my-3 p-2 shadow w-100 glass-card border-0 position-sticky top-0 z-1">
-                    <div id="carouselExampleIndicators" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="imac1.jpeg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="imac2.jpeg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="imac3.jpeg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-
+                    <a href="https://www.apple.com/ph/shop/buy-mac/imac/pink-24-inch-standard-glass-apple-m4-chip-with-8-core-cpu-and-8-core-gpu-16gb-memory-256gb"
+                        target="_blank" class="btn-pink">Buy</a>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <section id="viewmore" class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">Sleek Design and Vibrant Colors</h5>
-                        <img src="diffimac.png" alt="Pink iMac design" class="img-fluid rounded-4 my-3">
-                        <p>
-                            The redesigned iMac comes in a lively palette of green, yellow, orange, pink, purple, blue,
-                            and silver. Its ultra-thin build combines style and performance, instantly brightening up
-                            any workspace. Each model includes color-coordinated accessories like the Magic Keyboard and
-                            Magic Mouse (or optional Magic Trackpad), all now updated with USB-C for easier charging.
-                        </p>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="carousel-wrapper">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="imac1.jpeg" class="d-block w-100" alt="Pink iMac front view">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imac2.jpeg" class="d-block w-100" alt="Pink iMac side view">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="imac3.jpeg" class="d-block w-100" alt="Pink iMac accessories">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">Powered by the M4 Chip</h5>
-                        <img src="imacm4.jpg" alt="M4 Chip" class="img-fluid rounded-4 my-3">
-                        <p>
-                            At the core of the new iMac is Apple's most advanced silicon yet—the M4 chip. It delivers up
-                            to
-                            1.7× faster everyday performance than the M1 model and 2.1× higher speeds for demanding
-                            tasks
-                            like gaming, video editing, and 3D rendering. With the world's fastest CPU core, a powerful
-                            new
-                            GPU, and an advanced 16-core Neural Engine, the iMac M4 handles everything from productivity
-                            to
-                            creative workflows with ease. Up to 32GB of unified memory, it ensures smooth
-                            multitasking, responsive apps, and AI-driven features that make every task faster and
-                            smarter.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">Apple Intelligence: A Smarter Mac Experience</h5>
-                        <img src="applei.jpg" alt="Apple Intelligence" class="img-fluid rounded-4 my-3">
-                        <p>
-                            Apple Intelligence brings a smarter, more intuitive Mac experience. It includes systemwide
-                            Writing Tools that help you draft, edit, and format content effortlessly, a more capable
-                            Siri
-                            that understands both text and voice commands, and seamless ChatGPT integration for instant
-                            AI-powered assistance on your desktop. Combined with Apple's Private Cloud Compute, all your
-                            personal data stays secure and private while you benefit from faster, smarter workflows,
-                            smarter
-                            app suggestions, and AI-driven automation for creative and productivity tasks.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">Stunning 4.5K Retina Display</h5>
-                        <img src="retina.png" alt="4.5K Retina Display" class="img-fluid rounded-4 my-3">
-                        <p>
-                            The 24-inch 4.5K Retina display continues to shine as one of iMac’s best features. A new
-                            nano-texture glass option minimizes glare while preserving color accuracy, perfect for any
-                            lighting condition. Combined with a six-speaker sound system and three-microphone array, the
-                            iMac offers an immersive multimedia experience for work, gaming, and entertainment.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">Smarter Video Calls</h5>
-                        <img src="cam.jpeg" alt="12MP Center Stage camera" class="img-fluid rounded-4 my-3">
-                        <p>
-                            Featuring a 12MP Center Stage camera, the iMac keeps you perfectly in frame during calls.
-                            Its new Desk View mode offers a top-down look at your workspace, making it effortless to
-                            showcase projects, share ideas, and create engaging presentations. It is perfect for
-                            teachers, creators, and professionals. Perfect for any workspace, designed for effortless
-                            productivity.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">Advanced Connectivity</h5>
-                        <img src="thunderbolt.png" alt="USB-C ports with Thunderbolt 4"
-                            class="img-fluid rounded-4 my-3">
-                        <p>
-                            Every iMac now includes four USB-C ports with Thunderbolt 4, enabling
-                            ultra-fast data transfers and support for up to two 6K external displays. It also features
-                            Wi-Fi 6E for lightning-fast wireless internet and Bluetooth 5.3 for seamless device pairing.
-                            Touch ID for secure and effortless logins, authorize purchases, and access sensitive
-                            files with just a fingerprint, making everyday tasks more convenient.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">macOS Sequoia: Designed for the M4</h5>
-                        <img src="sequoia.jpeg" alt="macOS Sequoia" class="img-fluid rounded-4 my-3">
-                        <p>
-                            Running on macOS Sequoia, the iMac brings new tools like iPhone Mirroring, improved Safari
-                            Highlights, Game Mode, and Personalized Spatial Audio. The new Passwords app keeps
-                            credentials safe, while customizable video call backgrounds add a personal touch.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">The Next Leap for iMac and the M4 Family</h5>
-                        <img src="promax.jpeg" alt="macOS Sequoia" class="img-fluid rounded-4 my-3">
-                        <p>
-                            Alongside the 24-inch iMac, Apple revealed the M4 Pro and M4 Max chips, the most powerful in
-                            the M4 family. The iMac itself comes
-                            with 16GB or 24GB memory and 256GB, 512GB, or 1TB storage, starting at ₱84,990. With its
-                            sleek design, 4.5K Retina display, and intelligent features, it blends style,
-                            performance, and creativity.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card my-3 p-3 shadow w-100 glass-card border-0 text-center">
-                        <h5 class="fw-bold text-pink">Built for the Planet</h5>
-                        <img src="goal.png" alt="Apple’s 2030 carbon-neutral goal" class="img-fluid rounded-4 my-3">
-                        <p>
-                            Aligned with Apple’s 2030 carbon-neutral goal, the new iMac is crafted from 100% recycled
-                            aluminum and meets strict energy efficiency standards. Apple is already carbon neutral, and
-                            by 2030, every product you love will be too, with reduced emissions from manufacturing,
-                            transportation, and energy use. This brings cutting-edge technology and sustainability
-                            together for a better future.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
-    <footer class="text-center py-3 text-pink">
-        <p class="mb-0">&copy; 2025 Justine Weslley. All content is for educational purposes.</p>
+    <section class="section" id="configure">
+        <h2 class="section-title">Configure your iMac</h2>
+        <p class="home-text" style="max-width: 700px; margin-bottom: 3rem;">
+            Customize your Pink iMac to match your needs. Choose from various memory, storage, and accessory options.
+        </p>
+
+        <div class="config-section">
+            <h3 class="config-title">Memory</h3>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>16GB unified memory</p>
+                        <div class="option-price">Included</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>24GB unified memory</p>
+                        <div class="option-price">+ ₱13,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h3 class="config-title">Storage</h3>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>256GB SSD storage</p>
+                        <div class="option-price">Included</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>512GB SSD storage</p>
+                        <div class="option-price">+ ₱13,000</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>1TB SSD storage</p>
+                        <div class="option-price">+ ₱26,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h3 class="config-title">Ethernet</h3>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>No Ethernet</p>
+                        <div class="option-price">Included</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>Gigabit Ethernet</p>
+                        <div class="option-price">+ ₱2,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h3 class="config-title">Pink Mouse or Trackpad</h3>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>Magic Mouse</p>
+                        <div class="option-price">Included</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>Magic Trackpad</p>
+                        <div class="option-price">+ ₱2,500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h3 class="config-title">Pink Keyboards</h3>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>Magic Keyboard - US English</p>
+                        <div class="option-price">Included</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>Magic Keyboard with Touch ID and Numeric Keypad</p>
+                        <div class="option-price">+ ₱5,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h3 class="config-title">Pre-Installed Software</h3>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>Final Cut Pro</p>
+                        <div class="option-price">+ ₱19,990</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>Logic Pro</p>
+                        <div class="option-price">+ ₱12,990</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="option-card">
+                        <p>No, thanks</p>
+                        <div class="option-price">Included</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <h2 class="section-title">What makes it special</h2>
+        <p class="home-text" style="max-width: 700px; margin-bottom: 3rem;">
+            Discover the innovative features that make the Pink iMac perfect for work, creativity, and everything in
+            between.
+        </p>
+
+        <div class="row g-4 mt-3">
+            <div class="col-12">
+                <div class="feature-card">
+                    <h5>Sleek Design and Vibrant Colors</h5>
+                    <img src="diffimac.png" alt="Pink iMac design">
+                    <p>
+                        The redesigned iMac comes in a lively palette of green, yellow, orange, pink, purple, blue,
+                        and silver. Its ultra-thin build combines style and performance, instantly brightening up
+                        any workspace. Each model includes color-coordinated accessories like the Magic Keyboard and
+                        Magic Mouse (or optional Magic Trackpad), all now updated with USB-C for easier charging.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <h5>Powered by the M4 Chip</h5>
+                    <img src="imacm4.jpg" alt="M4 Chip">
+                    <p>
+                        At the core of the new iMac is Apple's most advanced silicon yet—the M4 chip. It delivers up
+                        to 1.7× faster everyday performance than the M1 model and 2.1× higher speeds for demanding
+                        tasks like gaming, video editing, and 3D rendering. With the world's fastest CPU core, a powerful
+                        new GPU, and an advanced 16-core Neural Engine, the iMac M4 handles everything from productivity
+                        to creative workflows with ease.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <h5>Apple Intelligence: A Smarter Mac Experience</h5>
+                    <img src="applei.jpg" alt="Apple Intelligence">
+                    <p>
+                        Apple Intelligence brings a smarter, more intuitive Mac experience. It includes systemwide
+                        Writing Tools that help you draft, edit, and format content effortlessly, a more capable
+                        Siri that understands both text and voice commands, and seamless ChatGPT integration for instant
+                        AI-powered assistance on your desktop.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <h5>Stunning 4.5K Retina Display</h5>
+                    <img src="retina.png" alt="4.5K Retina Display">
+                    <p>
+                        The 24-inch 4.5K Retina display continues to shine as one of iMac's best features. A new
+                        nano-texture glass option minimizes glare while preserving color accuracy, perfect for any
+                        lighting condition.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <h5>Smarter Video Calls</h5>
+                    <img src="cam.jpeg" alt="12MP Center Stage camera">
+                    <p>
+                        Featuring a 12MP Center Stage camera, the iMac keeps you perfectly in frame during calls.
+                        Its new Desk View mode offers a top-down look at your workspace, making it effortless to
+                        showcase projects and create engaging presentations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <h5>Advanced Connectivity</h5>
+                    <img src="thunderbolt.png" alt="USB-C ports with Thunderbolt 4">
+                    <p>
+                        Every iMac now includes four USB-C ports with Thunderbolt 4, enabling ultra-fast data
+                        transfers and support for up to two 6K external displays. It also features Wi-Fi 6E for
+                        lightning-fast wireless internet and Bluetooth 5.3 for seamless device pairing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <h5>macOS Sequoia: Designed for the M4</h5>
+                    <img src="sequoia.jpeg" alt="macOS Sequoia">
+                    <p>
+                        Running on macOS Sequoia, the iMac brings new tools like iPhone Mirroring, improved Safari
+                        Highlights, Game Mode, and Personalized Spatial Audio. The new Passwords app keeps
+                        credentials safe, while customizable video call backgrounds add a personal touch.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <h5>The Next Leap for iMac and the M4 Family</h5>
+                    <img src="promax.jpeg" alt="M4 Family">
+                    <p>
+                        Alongside the 24-inch iMac, Apple revealed the M4 Pro and M4 Max chips, the most powerful in
+                        the M4 family. The iMac itself comes with 16GB or 24GB memory and 256GB, 512GB, or 1TB
+                        storage, starting at ₱84,990. With its sleek design, 4.5K Retina display, and intelligent features,
+                        it blends style, performance, and creativity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="feature-card">
+                    <h5>Built for the Planet</h5>
+                    <img src="goal.png" alt="Apple's 2030 carbon-neutral goal">
+                    <p>
+                        Aligned with Apple's 2030 carbon-neutral goal, the new iMac is crafted from 100% recycled
+                        aluminum and meets strict energy efficiency standards. Apple is already carbon neutral, and
+                        by 2030, every product you love will be too, with reduced emissions from manufacturing,
+                        transportation, and energy use. This brings cutting-edge technology and sustainability
+                        together for a better future.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Justine Weslley. Made with <span class="footer-heart">♥</span></p>
+        <p>All content is for educational purposes.</p>
         <small>Images and product info © Apple Inc. | Other images sourced online</small>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.querySelectorAll('#imac-nav .nav-link').forEach(link => {
-            link.addEventListener('click', function () {
-                document.querySelector('#imac-nav .active')?.classList.remove('active');
-                this.classList.add('active');
+        const sunIcon = `<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>`;
+        const moonIcon = `<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>`;
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            const icon = document.getElementById('toggleIcon');
+            const label = document.getElementById('toggleLabel');
+            
+            if (isDark) {
+                html.setAttribute('data-theme', 'light');
+                icon.innerHTML = moonIcon;
+                label.textContent = 'Dark';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                icon.innerHTML = sunIcon;
+                label.textContent = 'Light';
+            }
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        }
+
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.getElementById('toggleIcon').innerHTML = sunIcon;
+                document.getElementById('toggleLabel').textContent = 'Light';
+            }
+        })();
+
+        function toggleMobileMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                    if (window.innerWidth <= 768) {
+                        document.getElementById("navLinks").classList.remove("active");
+                        document.querySelector(".hamburger").classList.remove("active");
+                    }
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(section => {
+                if (window.scrollY >= section.offsetTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
-
-
 </body>
 
 </html>
